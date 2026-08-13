@@ -18,6 +18,7 @@
         jnoortheen.nix-ide
         # vim mode
         vscodevim.vim
+        golang.go
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {

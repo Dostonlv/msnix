@@ -22,10 +22,14 @@
 
       # substituers that will be considered before the official ones(https://cache.nixos.org)
       substituters = [
+        "https://mirrors.ustc.edu.cn/nix-channels/store"
         "https://nix-community.cachix.org"
+        "https://cache.xinux.uz?priority=1"
+
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+         "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
       ];
       builders-use-substitutes = true;
 

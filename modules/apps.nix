@@ -21,11 +21,14 @@
     git
     direnv
     alejandra
+    go
   ];
   environment.variables.EDITOR = "nvim";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
+
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
   #
@@ -46,6 +49,9 @@
       "iina" # video player
       "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
       "stats" # beautiful system monitor
+      "wezterm"
+      "tailscale-app"
+      "termius"
 
       # Development
       "insomnia" # REST client
