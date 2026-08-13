@@ -1,6 +1,8 @@
-{ username, inputs,... }:
-
 {
+  username,
+  inputs,
+  ...
+}: {
   # import sub modules
   imports = [
     ./shell.nix

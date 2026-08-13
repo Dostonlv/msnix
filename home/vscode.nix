@@ -1,10 +1,12 @@
-{ pkgs, lib, ... }:
 {
+  pkgs,
+  lib,
+  ...
+}: {
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
-    extensions =
-      with pkgs.vscode-extensions;
+    extensions = with pkgs.vscode-extensions;
       [
         pkief.material-icon-theme
         bbenoist.nix
@@ -27,16 +29,17 @@
       ];
 
     userSettings = {
-
       "[rust]" = {
         "editor.defaultFormatter" = "rust-lang.rust-analyzer";
+        "editor.formatOnSave" = true;
       };
 
       "[nix]" = {
         "editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "editor.formatOnSave" = true;
       };
 
-      "nix.formatterPath" = "nixfmt";
+      # "nix.formatterPath" = "nixfmt";
       "files.autoSave" = "afterDelay";
       "files.autoSaveDelay" = 0;
       "workbench.iconTheme" = "material-icon-theme";
@@ -44,8 +47,9 @@
       "editor.fontSize" = 14;
       "editor.formatOnSave" = true;
       "nix.enableLanguageServer" = true;
+      "nix.formatterPath" = "alejandra";
 
-     # vim mode 
+      # vim mode
       "vim.easymotion" = true;
       "vim.incsearch" = true;
       "vim.useSystemClipboard" = true;
@@ -109,7 +113,7 @@
             "j"
             "j"
           ];
-          "after" = [ "<Esc>" ];
+          "after" = ["<Esc>"];
         }
       ];
       "vim.handleKeys" = {
@@ -120,8 +124,6 @@
         "<C-w>" = false;
         "<C-x>" = false;
       };
-
     };
   };
-
 }

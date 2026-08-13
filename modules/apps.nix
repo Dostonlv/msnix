@@ -1,5 +1,4 @@
-{ pkgs, ...}: {
-
+{pkgs, ...}: {
   ##########################################################################
   #
   #  Install all apps and packages here.
@@ -20,8 +19,10 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
+    direnv
+    alejandra
   ];
-   environment.variables.EDITOR = "nvim";
+  environment.variables.EDITOR = "nvim";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -31,16 +32,16 @@
   # The apps installed by homebrew are not managed by nix, and not reproducible!
   # But on macOS, homebrew has a much larger selection of apps than nixpkgs, especially for GUI apps!
   homebrew = {
-  enable = true;
-   onActivation = {
+    enable = true;
+    onActivation = {
       autoUpdate = true; # Fetch the newest stable branch of Homebrew's git repo
       upgrade = true; # Upgrade outdated casks, formulae, and App Store apps
       # 'zap': uninstalls all formulae(and related files) not listed in the generated Brewfile
       # cleanup = "zap";
     };
-  # taps = [];
-  # brews = [];
-  casks = [
+    # taps = [];
+    # brews = [];
+    casks = [
       "telegram"
       "iina" # video player
       "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
@@ -49,5 +50,5 @@
       # Development
       "insomnia" # REST client
     ];
-};
+  };
 }

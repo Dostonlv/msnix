@@ -3,7 +3,7 @@
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-      oh-my-zsh = {
+    oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
       plugins = [
@@ -21,7 +21,7 @@
   };
 
   home.shellAliases = {
-   # add shell nix 
-   # k = "kubectl";
+    # add shell nix
+    # k = "kubectl";
   };
 }
