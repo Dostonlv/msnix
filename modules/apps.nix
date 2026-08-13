@@ -36,12 +36,11 @@
       autoUpdate = true; # Fetch the newest stable branch of Homebrew's git repo
       upgrade = true; # Upgrade outdated casks, formulae, and App Store apps
       # 'zap': uninstalls all formulae(and related files) not listed in the generated Brewfile
-      # cleanup = "uninstall";
+      # cleanup = "zap";
     };
   # taps = [];
   # brews = [];
   casks = [
-      "firefox"
       "telegram"
       "iina" # video player
       "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)

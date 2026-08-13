@@ -1,4 +1,4 @@
-{ username, ... }:
+{ username, inputs,... }:
 
 {
   # import sub modules
@@ -8,6 +8,7 @@
     ./git.nix
     ./starship.nix
     ./vscode.nix
+    ./firefox.nix
   ];
 
   # Home Manager needs a bit of information about you and the

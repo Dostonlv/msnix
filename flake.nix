@@ -15,6 +15,10 @@
       url = "github:lnl7/nix-darwin/nix-darwin-26.05";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
+     firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -25,13 +29,13 @@
     ];
   };
 
-  outputs = inputs @ {
+  outputs =  {
     self,
     nixpkgs,
     darwin,
-     home-manager,
+    home-manager,
     ...
-  }:
+  }@inputs:
   let
     username = "kisuke";
     useremail = "kisuke@deltateam.uz";
@@ -40,7 +44,7 @@
     specialArgs =
       inputs
       // {
-        inherit username useremail hostname;
+        inherit username useremail hostname inputs;
       };
   in
   {
