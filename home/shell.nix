@@ -1,10 +1,23 @@
 {...}: {
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
-    initContent = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-    '';
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+      oh-my-zsh = {
+      enable = true;
+      theme = "robbyrussell";
+      plugins = [
+        "git"
+        "history"
+        "rust"
+      ];
+    };
+    shellAliases = {
+      reload = "sudo nixos-rebuild switch --flake ";
+      garbage = "sudo nix-collect-garbage --delete-old";
+      nihh = "code ~/nix";
+      dev = "cd ~/Developer";
+    };
   };
 
   home.shellAliases = {
