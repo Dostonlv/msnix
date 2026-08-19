@@ -25,6 +25,12 @@
     nixd
     nil
     bitwarden-desktop
+    docker
+    docker-compose
+    dockerfile-language-server
+    docker-color-output
+    dockerfmt
+    colima
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -55,6 +61,7 @@
       "wezterm"
       "tailscale-app"
       "termius"
+      "datagrip"
 
       # Development
       "insomnia" # REST client

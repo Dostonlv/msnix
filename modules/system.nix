@@ -162,7 +162,6 @@
   environment.shells = [
     pkgs.zsh
   ];
-
   # Fonts
   fonts = {
     packages = with pkgs; [
