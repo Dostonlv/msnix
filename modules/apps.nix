@@ -22,6 +22,9 @@
     direnv
     alejandra
     go
+    nixd
+    nil
+    bitwarden-desktop
   ];
   environment.variables.EDITOR = "nvim";
 

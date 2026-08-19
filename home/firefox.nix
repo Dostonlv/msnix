@@ -18,6 +18,7 @@
         packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
           sidebery
           material-icons-for-github
+          bitwarden
         ];
         settings = {
           "uBlock0@raymondhill.net".settings = {
