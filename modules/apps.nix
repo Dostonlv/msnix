@@ -31,6 +31,7 @@
     docker-color-output
     dockerfmt
     colima
+    vim
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -52,7 +53,9 @@
       # cleanup = "zap";
     };
     # taps = [];
-    # brews = [];
+    brews = [
+      "qemu"
+    ];
     casks = [
       "telegram"
       "iina" # video player
